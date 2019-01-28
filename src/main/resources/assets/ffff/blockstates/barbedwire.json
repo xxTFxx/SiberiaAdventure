@@ -1,0 +1,11 @@
+{
+    "variants": 
+	{
+	    "normal": { "model": "ffff:barbedwire", "y": 90},
+        "facing=north": { "model": "ffff:barbedwire", "y": 90},
+        "facing=south": { "model": "ffff:barbedwire", "y": 270 },
+        "facing=west":  { "model": "ffff:barbedwire"},
+        "facing=east":  { "model": "ffff:barbedwire"}
+        
+    }
+}
