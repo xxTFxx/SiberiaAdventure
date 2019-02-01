@@ -2,6 +2,8 @@ itemGroup.ffff.mod_tab=Fuhrer
 
 item.ffff.stalinium_ingot.name=Stalinium
 item.ffff.stalinium_sword.name=Stalinium Sword
+item.ffff.soviet_anthem.name=Best song in the world
+item.record.soviet_anthem.desc=§4HURAAAAAAA
 
 
 tile.ffff.stalinium_block.name=Stalinium Block

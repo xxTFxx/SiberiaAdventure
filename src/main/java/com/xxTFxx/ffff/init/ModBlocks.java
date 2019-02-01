@@ -10,4 +10,5 @@ public class ModBlocks {
 	public static final Block STALINIUM_BLOCK = null;
 	
 	public static final Block BARBEDWIRE = null;
+	public static final Block BARBEDWIREFENCE = null;
 }

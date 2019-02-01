@@ -1,11 +1,11 @@
 {
     "variants": 
 	{
-	    "normal": { "model": "ffff:barbedwire", "y": 90},
-        "facing=north": { "model": "ffff:barbedwire", "y": 90},
-        "facing=south": { "model": "ffff:barbedwire", "y": 270 },
-        "facing=west":  { "model": "ffff:barbedwire"},
-        "facing=east":  { "model": "ffff:barbedwire"}
+	    "normal": { "model": "ffff:barbedwire"},
+        "facing=north": { "model": "ffff:barbedwire"},
+        "facing=south": { "model": "ffff:barbedwire", "y": 180 },
+        "facing=west":  { "model": "ffff:barbedwire" , "y": 270 },
+        "facing=east":  { "model": "ffff:barbedwire" , "y": 90 }
         
     }
 }

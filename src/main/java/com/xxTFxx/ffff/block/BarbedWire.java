@@ -10,6 +10,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -29,19 +30,26 @@ import net.minecraft.world.World;
 
 public class BarbedWire extends BasicBlock{
 	
-	public static final AxisAlignedBB BarbedWireAABB = new AxisAlignedBB(0.1875D, 0D, 0D, 0.75D , 0.5635D, 1D);
-	public static final AxisAlignedBB BarbedWireAABB1 = new AxisAlignedBB(0D, 0D, 0.1875D, 1D , 0.5635D, 0.75D);
+	public static final AxisAlignedBB BarbedWireAABBn = new AxisAlignedBB(0D, 0D, 0.1875D, 1D , 0.5635D, 0.75D);
+	public static final AxisAlignedBB BarbedWireAABBe = new AxisAlignedBB(0.25D, 0D, 0D, 0.8125D , 0.5635D, 1D);
+	public static final AxisAlignedBB BarbedWireAABBs = new AxisAlignedBB(0D, 0D, 0.25D, 1D , 0.5635D, 0.8125D);
+	public static final AxisAlignedBB BarbedWireAABBw = new AxisAlignedBB(0.1875D, 0D, 0D, 0.75D , 0.5635D, 1D);
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 	
 	
 	public BarbedWire(String name) {
-		super(Material.IRON, SoundType.METAL, name);
+		super(Material.ROCK, SoundType.METAL, name);
 		setHardness(10.0F);
 	}
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return null;
+	}
+	
+	@Override
+	public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+		return BlockFaceShape.UNDEFINED;
 	}
 	
 	@Override
@@ -57,15 +65,23 @@ public class BarbedWire extends BasicBlock{
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		EnumFacing facing = (EnumFacing)state.getValue(FACING);
-		if(facing.equals(EnumFacing.WEST) || facing.equals(EnumFacing.EAST))
+		if(facing.equals(EnumFacing.WEST) )
 		{
-			return BarbedWireAABB;
+			return BarbedWireAABBw;
 		}
-		else if(facing.equals(EnumFacing.NORTH) || facing.equals(EnumFacing.SOUTH))
+		else if(facing.equals(EnumFacing.EAST))
 		{
-			return BarbedWireAABB1;
+			return BarbedWireAABBe;
 		}
-		return BarbedWireAABB;
+		else if(facing.equals(EnumFacing.NORTH))
+		{
+			return BarbedWireAABBn;
+		}
+		else if(facing.equals(EnumFacing.SOUTH))
+		{
+			return BarbedWireAABBs;
+		}
+		return null;
 	}
 	
 	@Override

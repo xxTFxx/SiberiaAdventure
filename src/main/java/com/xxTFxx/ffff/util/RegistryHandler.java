@@ -2,11 +2,13 @@ package com.xxTFxx.ffff.util;
 
 import com.xxTFxx.ffff.Main;
 import com.xxTFxx.ffff.block.BarbedWire;
+import com.xxTFxx.ffff.block.BarbedWireFence;
 import com.xxTFxx.ffff.block.BasicBlock;
 import com.xxTFxx.ffff.init.BiomeInit;
 import com.xxTFxx.ffff.init.EntityInit;
 import com.xxTFxx.ffff.init.ModBlocks;
 import com.xxTFxx.ffff.item.ItemBase;
+import com.xxTFxx.ffff.item.ItemModRecord;
 import com.xxTFxx.ffff.item.ItemModSword;
 import com.xxTFxx.ffff.materials.ModMaterials;
 import com.xxTFxx.ffff.world.biomes.BiomeSiberia;
@@ -45,7 +47,8 @@ public class RegistryHandler {
 	public static void registerBlocks(Register<Block> event) {
 		final Block[] blocks = {
 			new BasicBlock(Material.IRON , SoundType.METAL , "stalinium_block" , 5.0F),
-			new BarbedWire("barbedwire")
+			new BarbedWire("barbedwire"),
+			new BarbedWireFence("barbedwirefence")
 		};
 		event.getRegistry().registerAll(blocks);
 	}
@@ -55,12 +58,14 @@ public class RegistryHandler {
 	public static void registerItems(Register<Item> event) {
 		final Item[] items = {
 				new ItemBase("stalinium_ingot"),
+				new ItemModRecord("soviet_anthem" , ModSoundEvent.SOVIET_ANTHEM),
 				new ItemModSword(ModMaterials.MOD_TOOL , "stalinium_sword")
 		};
 		
 		final Item[] itemBlocks = {
 			new ItemBlock(ModBlocks.STALINIUM_BLOCK).setRegistryName(ModBlocks.STALINIUM_BLOCK.getRegistryName()),	
-			new ItemBlock(ModBlocks.BARBEDWIRE).setRegistryName(ModBlocks.BARBEDWIRE.getRegistryName())
+			new ItemBlock(ModBlocks.BARBEDWIRE).setRegistryName(ModBlocks.BARBEDWIRE.getRegistryName()),
+			new ItemBlock(ModBlocks.BARBEDWIREFENCE).setRegistryName(ModBlocks.BARBEDWIREFENCE.getRegistryName())
 		};
 		
 		
@@ -71,7 +76,7 @@ public class RegistryHandler {
 	
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
-
+		ModSoundEvent.registerSounds();
 		GameRegistry.registerWorldGenerator(new WorldGenCustomStructures(), 0);
 		EntityInit.registerEnities();
 		RenderHandler.registerEntityRenders();
