@@ -1,0 +1,10 @@
+{
+    "parent": "siberianadv:block/barbedwirefence".
+    "display":
+    {
+        "firstperson_righthand":
+        {
+            "translation":[0, 2, 0],
+        }
+    }
+}
