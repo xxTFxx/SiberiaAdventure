@@ -26,6 +26,8 @@ public class Main {
 	public static final int ENTITY_SIBERIAMAN = 140;
 	public static final int ENTITY_SIBERIABEAR = 141;
 	
+	public static final int GUI_SIMPLE_GENERATOR = 1;
+	
 	public static Logger logger;
 	
 	@SidedProxy(clientSide = Main.CLIENT_PROXY_CLASS, serverSide = Main.SERVER_PROXY_CLASS)

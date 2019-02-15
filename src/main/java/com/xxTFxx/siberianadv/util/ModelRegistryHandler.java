@@ -21,11 +21,14 @@ public class ModelRegistryHandler {
 		registerModel(ModItems.SOVIET_ANTHEM);
 		registerModel(ModItems.STALINIUM_SWORD);		
 		registerModel(ModItems.COFFECUP);
+		registerModel(ModItems.BEAR_FUR);
+	//	registerModel(ModItems.USHANKA);
 		
 		registerModel(Item.getItemFromBlock(ModBlocks.STALINIUM_BLOCK));
 		registerModel(Item.getItemFromBlock(ModBlocks.BARBEDWIRE));
+		registerModel(Item.getItemFromBlock(ModBlocks.BARBEDWIREFENCE));
 		registerModel(Item.getItemFromBlock(ModBlocks.CUP));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SNOWM), 0, new ModelResourceLocation("snow", "inventory"));
+		//ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SNOWM), 0, new ModelResourceLocation("snow", "inventory"));
 		
 	}
 	private static void registerModel(Item item) {

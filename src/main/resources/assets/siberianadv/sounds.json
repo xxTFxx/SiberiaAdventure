@@ -3,6 +3,6 @@
     {
         "category": "record",
         "subtitle": "music.soviet_anthem",
-        "sounds": [ { "name": "ffff:music/soviet_anthem", "stream": true } ]
+        "sounds": [ { "name": "siberianadv:music/soviet_anthem", "stream": true } ]
     }
 }

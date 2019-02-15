@@ -1,6 +1,7 @@
 package com.xxTFxx.siberianadv.entity;
 
 import com.google.common.base.Predicate;
+import com.xxTFxx.siberianadv.util.handlers.LootTableHandler;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -12,6 +13,7 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityPolarBear;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class EntitySiberiaBear extends EntityPolarBear{
@@ -34,5 +36,10 @@ public class EntitySiberiaBear extends EntityPolarBear{
 	        this.targetTasks.taskEntries.clear();
 	        targetTasks.addTask(0, new EntityAINearestAttackableTarget(this , EntityPlayer.class , true));
 	    }
+	 
+	 @Override
+	protected ResourceLocation getLootTable() {
+		return LootTableHandler.SIBERIAN_BEAR;
+	}
 	
 }

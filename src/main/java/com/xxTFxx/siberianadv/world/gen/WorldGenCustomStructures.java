@@ -1,6 +1,7 @@
 package com.xxTFxx.siberianadv.world.gen;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 import com.xxTFxx.siberianadv.init.ModBlocks;
@@ -22,7 +23,6 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
-import scala.actors.threadpool.Arrays;
 
 public class WorldGenCustomStructures implements IWorldGenerator{
 
@@ -45,8 +45,8 @@ public class WorldGenCustomStructures implements IWorldGenerator{
 				
 			case 0:
 				
-				generateStructure(SHOUSE, SHOUSE.getName() ,world, random, chunkX, chunkZ, 100, ModBlocks.SNOWM, BiomeSiberia.class , BiomeForest.class , BiomePlains.class , BiomeTaiga.class);
-				generateStructure(MINE1, MINE1.getName() ,world, random, chunkX, chunkZ, 70, ModBlocks.SNOWM, BiomeSiberia.class);
+				generateStructure(SHOUSE, SHOUSE.getName() ,world, random, chunkX, chunkZ, 100, Blocks.SNOW, BiomeSiberia.class , BiomeForest.class , BiomePlains.class , BiomeTaiga.class);
+				generateStructure(MINE1, MINE1.getName() ,world, random, chunkX, chunkZ, 70, Blocks.SNOW, BiomeSiberia.class);
 				
 				break;
 				

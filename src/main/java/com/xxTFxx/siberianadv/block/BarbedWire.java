@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.xxTFxx.siberianadv.init.ModBlocks;
 import com.xxTFxx.siberianadv.init.ModItems;
+import com.xxTFxx.siberianadv.util.handlers.DamageSourceHandler;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
@@ -116,7 +117,7 @@ public class BarbedWire extends BasicBlock{
 	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		entityIn.setInWeb();
-		entityIn.attackEntityFrom(DamageSource.FALL, 2);
+		entityIn.attackEntityFrom(DamageSourceHandler.BARBED_WIRE, 2);
 	}
 	
 	@Override

@@ -9,7 +9,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public class OreDictionaryCompat {
 	public static void registerOres()
 	{
-		OreDictionary.registerOre("snow", ModBlocks.SNOWM);
+	//	OreDictionary.registerOre("snow", ModBlocks.SNOWM);
 		
 
 	}

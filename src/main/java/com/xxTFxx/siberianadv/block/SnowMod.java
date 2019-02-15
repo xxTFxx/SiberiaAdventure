@@ -27,7 +27,7 @@ public class SnowMod extends BlockSnowBlock{
 
 	public SnowMod() {
 		super();
-		setHardness(1.2F);
+		setHardness(0.8F);
 		setSoundType(SoundType.SNOW);
 		//setUnlocalizedName(Main.MOD_ID + "." + name);
 		//setCreativeTab(ModTab.Mod_Tab);

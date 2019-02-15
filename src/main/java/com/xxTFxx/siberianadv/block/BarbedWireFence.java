@@ -3,6 +3,7 @@ package com.xxTFxx.siberianadv.block;
 import com.xxTFxx.siberianadv.Main;
 import com.xxTFxx.siberianadv.init.ModBlocks;
 import com.xxTFxx.siberianadv.tabs.ModTab;
+import com.xxTFxx.siberianadv.util.handlers.DamageSourceHandler;
 
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.SoundType;
@@ -30,7 +31,7 @@ public class BarbedWireFence extends BlockPane{
 	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		entityIn.setInWeb();
-		entityIn.attackEntityFrom(DamageSource.FALL, 2);
+		entityIn.attackEntityFrom(DamageSourceHandler.BARBED_WIRE, 2);
 	}
 	
 	@Override
